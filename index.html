@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Owais Visuals — Creative AI Studio</title>
+
+<meta name="description" content="Owais Visuals — AI videos, product advertising, visual design and websites.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(5,5,5,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #202020;
+}
+
+.nav-inner{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#777;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#999;
+    font-size:13px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.nav-btn{
+    border:1px solid #444;
+    padding:9px 17px;
+    border-radius:30px;
+    color:#fff!important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:calc(100vh - 72px);
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 480px;
+    gap:40px;
+    align-items:center;
+    padding:70px 0;
+}
+
+.hero-content{
+    padding-right:20px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #292929;
+    border-radius:30px;
+    padding:8px 15px;
+    color:#777;
+    font-size:10px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
+    line-height:.94;
+    letter-spacing:-4px;
+    margin-bottom:28px;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+    max-width:650px;
+    color:#888;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    border:1px solid #444;
+    border-radius:30px;
+    padding:13px 22px;
+    font-size:13px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+.btn.primary{
+    background:#fff;
+    color:#000;
+    border-color:#fff;
+}
+
+/* ================= LAB ================= */
+
+.lab-panel{
+    background:#080808;
+    border:1px solid #292929;
+    border-radius:28px;
+    padding:20px;
+    width:480px;
+    max-width:100%;
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+}
+
+.lab-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 5px 16px;
+}
+
+.lab-title{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#aaa;
+}
+
+.lab-dot{
+    width:8px;
+    height:8px;
+    background:#777;
+    border-radius:50%;
+    box-shadow:0 0 10px #777;
+}
+
+.lab-video{
+    border:1px solid #202020;
+    border-radius:18px;
+    overflow:hidden;
+    background:#000;
+}
+
+.lab-video video{
+    width:100%;
+    height:300px;
+    display:block;
+    object-fit:contain;
+    background:#000;
+}
+
+.lab-caption{
+    padding:13px 15px;
+    background:#090909;
+}
+
+.lab-caption small{
+    color:#555;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.lab-caption h3{
+    margin-top:5px;
+    font-size:15px;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:90px 0;
+    border-top:1px solid #171717;
+}
+
+.section-label{
+    color:#555;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:42px;
+    letter-spacing:-2px;
+    margin-bottom:14px;
+}
+
+.section-desc{
+    color:#777;
+    max-width:700px;
+    margin-bottom:38px;
+    line-height:1.7;
+}
+
+/* ================= VIDEO GRID ================= */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.video-card{
+    background:#090909;
+    border:1px solid #252525;
+    border-radius:24px;
+    overflow:hidden;
+}
+
+.video-card video{
+    width:100%;
+    height:350px;
+    display:block;
+    object-fit:cover;
+}
+
+.video-info{
+    padding:22px;
+}
+
+.video-info small{
+    color:#555;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.video-info h3{
+    margin:7px 0;
+    font-size:23px;
+}
+
+.video-info p{
+    color:#777;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* ================= DESIGN ================= */
+
+.design-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.design-card{
+    background:#090909;
+    border:1px solid #252525;
+    border-radius:24px;
+    overflow:hidden;
+}
+
+.design-card img{
+    width:100%;
+    height:390px;
+    object-fit:cover;
+    display:block;
+}
+
+.design-info{
+    padding:22px;
+}
+
+.design-info small{
+    color:#555;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.design-info h3{
+    margin-top:7px;
+    font-size:24px;
+}
+
+.design-info p{
+    color:#777;
+    margin-top:5px;
+    font-size:13px;
+}
+
+/* ================= SERVICES ================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.service{
+    padding:28px;
+    border:1px solid #252525;
+    border-radius:22px;
+    background:#090909;
+}
+
+.service-number{
+    color:#444;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.service h3{
+    margin:17px 0 8px;
+    font-size:23px;
+}
+
+.service p{
+    color:#777;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* ================= PRICING ================= */
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.price-card{
+    border:1px solid #292929;
+    border-radius:24px;
+    padding:30px;
+    background:#090909;
+}
+
+.price-card h3{
+    font-size:22px;
+}
+
+.price-card > p{
+    color:#777;
+    font-size:13px;
+    margin-top:7px;
+}
+
+.price{
+    font-size:32px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.price-card li{
+    color:#999;
+    font-size:13px;
+    padding:8px 0;
+    border-bottom:1px solid #191919;
+}
+
+/* ================= WEBSITE ================= */
+
+.website-section{
+    background:#080808;
+}
+
+.website-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:22px;
+}
+
+.website-preview{
+    border:1px solid #292929;
+    border-radius:25px;
+    overflow:hidden;
+    background:#000;
+}
+
+.website-preview iframe{
+    width:100%;
+    height:500px;
+    border:0;
+}
+
+.website-text{
+    border:1px solid #292929;
+    border-radius:25px;
+    padding:32px;
+}
+
+.website-text h3{
+    font-size:30px;
+    margin-bottom:14px;
+}
+
+.website-text p{
+    color:#777;
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.website-price{
+    font-size:42px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.website-packages{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:22px;
+}
+
+.website-package{
+    border:1px solid #252525;
+    border-radius:20px;
+    padding:24px;
+    background:#0a0a0a;
+}
+
+.website-package h4{
+    font-size:19px;
+}
+
+.package-price{
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.website-package p{
+    color:#777;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    text-align:center;
+    border:1px solid #292929;
+    border-radius:28px;
+    padding:55px 25px;
+    background:#090909;
+}
+
+.contact-box h2{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.contact-box p{
+    color:#777;
+    margin-bottom:28px;
+}
+
+/* ================= FEEDBACK ================= */
+
+.feedback{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:5000;
+}
+
+.feedback-button{
+    border:1px solid #444;
+    background:#fff;
+    color:#000;
+    border-radius:30px;
+    padding:11px 17px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.feedback-panel{
+    display:none;
+    position:absolute;
+    right:0;
+    bottom:55px;
+    width:280px;
+    background:#0c0c0c;
+    border:1px solid #333;
+    border-radius:20px;
+    padding:18px;
+}
+
+.feedback-panel.active{
+    display:block;
+}
+
+.feedback-panel h4{
+    margin-bottom:10px;
+}
+
+.feedback-panel textarea{
+    width:100%;
+    height:100px;
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+    padding:10px;
+    border-radius:10px;
+    resize:none;
+    margin-bottom:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid #191919;
+    padding:40px 0;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+footer p{
+    color:#555;
+    font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .lab-panel{
+        width:100%;
+    }
+
+    .lab-video video{
+        height:300px;
+    }
+
+    .video-grid,
+    .design-grid,
+    .service-grid,
+    .pricing-grid,
+    .website-grid{
+        grid-template-columns:1fr;
+    }
+
+    .website-packages{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+<div class="container nav-inner">
+
+<a href="#home" class="logo">
+OWAIS <span>VISUALS</span>
+</a>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#lab">LAB</a>
+<a href="#explainer">Explainers</a>
+<a href="#products">Products</a>
+<a href="#design">Design</a>
+<a href="#services">Services</a>
+<a href="#websites">Websites</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact" class="nav-btn">Let's Talk</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- ================= HERO + LAB ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+AI VISUALS • DIGITAL CREATIVE STUDIO
+</div>
+
+<h1>
+MAKE YOUR<br>
+BUSINESS <span>STAND OUT.</span>
+</h1>
+
+<p>
+Cinematic AI videos, product advertisements,
+face-led explainers, visual designs and modern
+websites — created to make your brand look different.
+</p>
+
+<div class="buttons">
+
+<a href="#lab" class="btn primary">
+Explore Work
+</a>
+
+<a href="#contact" class="btn">
+Start a Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ================= LAB ================= -->
+
+<div class="lab-panel" id="lab">
+
+<div class="lab-header">
+
+<div class="lab-title">
+LAB
+</div>
+
+<div class="lab-dot"></div>
+
+</div>
+
+
+<!-- MAIN VIDEO -->
+
+<div class="lab-video" id="labBox1">
+
+<video
+id="labVideo1"
+autoplay
+muted
+playsinline
+preload="auto">
+
+<source
+src="assets/owais-visuals-main.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="lab-caption">
+
+<small>MAIN FEATURE</small>
+
+<h3>Owais Visuals</h3>
+
+</div>
+
+</div>
+
+
+<!-- HOLOGRAPHIC VIDEO -->
+
+<div class="lab-video" id="labBox2" style="display:none;">
+
+<video
+id="labVideo2"
+muted
+playsinline
+preload="auto">
+
+<source
+src="assets/Man_interacting_with_holographic…_202608231258.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="lab-caption">
+
+<small>EXPERIMENTAL</small>
+
+<h3>Holographic Visual</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EXPLAINERS ================= -->
+
+<section id="explainer">
+
+<div class="container">
+
+<div class="section-label">
+FACE-LED CONTENT
+</div>
+
+<h2 class="section-title">
+Product Explainers
+</h2>
+
+<p class="section-desc">
+Presenter-led product content combining your face
+with AI-powered product visuals.
+</p>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<video controls muted loop playsinline preload="metadata">
+<source
+src="assets/Product_explainer_video_script_202608231313.mp4"
+type="video/mp4">
+</video>
+
+<div class="video-info">
+
+<small>PRODUCT EXPLAINER</small>
+
+<h3>Face-Led Product Explainer</h3>
+
+<p>
+Product explanation designed for modern social media advertising.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<video controls muted loop playsinline preload="metadata">
+<source
+src="assets/facewash advertisement.mp4"
+type="video/mp4">
+</video>
+
+<div class="video-info">
+
+<small>PRODUCT ADVERTISEMENT</small>
+
+<h3>Facewash Advertisement</h3>
+
+<p>
+Creator-style product presentation with visual storytelling.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+<div class="container">
+
+<div class="section-label">
+PRODUCT ADVERTISING
+</div>
+
+<h2 class="section-title">
+Premium Product Ads
+</h2>
+
+<p class="section-desc">
+Cinematic advertisements designed to make products
+look premium and attention-grabbing.
+</p>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<video controls muted loop playsinline preload="metadata">
+
+<source
+src="assets/Perfume_bottle_commercial_video_…_202608231303 (1).mp4"
+type="video/mp4">
+
+</video>
+
+<div class="video-info">
+
+<small>CINEMATIC COMMERCIAL</small>
+
+<h3>Perfume Commercial</h3>
+
+<p>
+Luxury product advertising with cinematic visual direction.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DESIGN ================= -->
+
+<section id="design">
+
+<div class="container">
+
+<div class="section-label">
+DESIGN
+</div>
+
+<h2 class="section-title">
+Visual Design
+</h2>
+
+<p class="section-desc">
+Selected graphic, editorial and digital design work.
+</p>
+
+<div class="design-grid">
+
+<div class="design-card">
+
+<img
+src="assets/atomic habit.jpeg"
+alt="Book Design"
+loading="lazy">
+
+<div class="design-info">
+
+<small>BOOK DESIGN</small>
+
+<h3>Book Design</h3>
+
+<p>
+Editorial book-cover concept and visual composition.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="design-card">
+
+<img
+src="assets/WhatsApp Image 2026-08-22 at 10.41.18 PM.jpeg"
+alt="Visual Design Showcase"
+loading="lazy">
+
+<div class="design-info">
+
+<small>VISUAL DESIGN</small>
+
+<h3>Visual Design Showcase</h3>
+
+<p>
+Creative digital composition and visual experimentation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-label">
+SERVICES
+</div>
+
+<h2 class="section-title">
+What We Create
+</h2>
+
+<p class="section-desc">
+Creative digital services for creators, businesses and brands.
+</p>
+
+<div class="service-grid">
+
+<div class="service">
+<div class="service-number">01</div>
+<h3>AI Promotional Videos</h3>
+<p>Cinematic promotional videos and short-form advertisements.</p>
+</div>
+
+<div class="service">
+<div class="service-number">02</div>
+<h3>Product Advertising</h3>
+<p>Premium product commercials designed for social media.</p>
+</div>
+
+<div class="service">
+<div class="service-number">03</div>
+<h3>Face-Led Explainers</h3>
+<p>Presenter-led product explanations using AI visuals.</p>
+</div>
+
+<div class="service">
+<div class="service-number">04</div>
+<h3>Visual Design</h3>
+<p>Book covers, posters, promotional graphics and creative designs.</p>
+</div>
+
+<div class="service">
+<div class="service-number">05</div>
+<h3>Website Creation</h3>
+<p>Modern responsive websites for businesses, creators and portfolios.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-label">
+PRICING
+</div>
+
+<h2 class="section-title">
+Video Pricing
+</h2>
+
+<p class="section-desc">
+Starting packages for creators, businesses and brands.
+</p>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+
+<h3>10-sec AI Promotional Reel</h3>
+
+<p>Quick promotional content for social media.</p>
+
+<div class="price">₹199–₹399</div>
+
+<ul>
+<li>10-second AI video</li>
+<li>Creative concept</li>
+<li>Cinematic direction</li>
+<li>Social-media ready</li>
+</ul>
+
+<a href="#contact" class="btn">
+Order Now
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>15–30 sec Promotional Video</h3>
+
+<p>More time for storytelling and product presentation.</p>
+
+<div class="price">₹499–₹899</div>
+
+<ul>
+<li>15–30 second video</li>
+<li>Advanced AI visuals</li>
+<li>Multiple shots</li>
+<li>Commercial direction</li>
+</ul>
+
+<a href="#contact" class="btn primary">
+Order Now
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>3-Video Package</h3>
+
+<p>Multiple promotional videos for your brand.</p>
+
+<div class="price">₹1,399–₹2,399</div>
+
+<ul>
+<li>3 promotional videos</li>
+<li>Creative concepts</li>
+<li>Consistent visual style</li>
+<li>Social-media ready</li>
+</ul>
+
+<a href="#contact" class="btn">
+Order Package
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>Monthly 8-Video Package</h3>
+
+<p>Consistent content for active businesses.</p>
+
+<div class="price">₹3,899–₹5,899</div>
+
+<ul>
+<li>8 videos per month</li>
+<li>Creative planning</li>
+<li>Consistent branding</li>
+<li>Priority production</li>
+</ul>
+
+<a href="#contact" class="btn">
+Discuss Package
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WEBSITE ================= -->
+
+<section id="websites" class="website-section">
+
+<div class="container">
+
+<div class="section-label">
+WEBSITE CREATION
+</div>
+
+<h2 class="section-title">
+We Build Websites Too.
+</h2>
+
+<p class="section-desc">
+Professional websites for businesses, creators, brands and portfolios.
+</p>
+
+<div class="website-grid">
+
+<div class="website-preview">
+
+<iframe
+src="https://owaisimran780-sketch.github.io/toolnest/"
+title="ToolNest Website Preview"
+loading="lazy">
+</iframe>
+
+</div>
+
+
+<div class="website-text">
+
+<h3>Website Creation</h3>
+
+<p>
+Need a modern website for your business, portfolio or brand?
+We create responsive websites with clean visual design.
+</p>
+
+<div class="website-price">
+₹499
+</div>
+
+<p>
+Starting price. Final pricing depends on pages,
+features and custom requirements.
+</p>
+
+<a
+href="https://owaisimran780-sketch.github.io/toolnest/"
+target="_blank"
+rel="noopener"
+class="btn primary">
+View Website
+</a>
+
+<a href="#contact" class="btn">
+Build My Website
+</a>
+
+</div>
+
+</div>
+
+
+<div class="website-packages">
+
+<div class="website-package">
+
+<h4>Starter</h4>
+
+<div class="package-price">
+₹499+
+</div>
+
+<p>
+1-page responsive website with basic sections.
+</p>
+
+</div>
+
+
+<div class="website-package">
+
+<h4>Business</h4>
+
+<div class="package-price">
+₹999+
+</div>
+
+<p>
+Multi-section website with services and contact.
+</p>
+
+</div>
+
+
+<div class="website-package">
+
+<h4>Premium</h4>
+
+<div class="package-price">
+₹1,999+
+</div>
+
+<p>
+Advanced website with custom sections and animations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-label">
+START SOMETHING
+</div>
+
+<h2>
+Have a project?
+</h2>
+
+<p>
+Tell us what you want to create and let's turn
+the idea into a professional visual.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+href="https://wa.me/918368516979"
+target="_blank"
+rel="noopener"
+class="btn primary">
+WhatsApp Us
+</a>
+
+<a
+href="https://wa.me/918368516979?text=Hi%20Owais%20Visuals%2C%20I%20want%20to%20discuss%20a%20project."
+target="_blank"
+rel="noopener"
+class="btn">
+Start Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEEDBACK ================= -->
+
+<div class="feedback">
+
+<button
+class="feedback-button"
+onclick="toggleFeedback()">
+Feedback
+</button>
+
+<div
+class="feedback-panel"
+id="feedbackPanel">
+
+<h4>
+Tell us what you think
+</h4>
+
+<textarea
+id="feedbackText"
+placeholder="Write your feedback..."></textarea>
+
+<button
+class="btn primary"
+onclick="sendFeedback()">
+Send Feedback
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-inner">
+
+<p>
+© 2026 OWAIS VISUALS. All rights reserved.
+</p>
+
+<p>
+AI Visuals • Product Ads • Design • Websites
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* =========================================
+   LAB ADVERTISEMENT SEQUENCE
+
+   VIDEO 1
+      ↓
+   VIDEO 2
+      ↓
+   VIDEO 1
+      ↓
+   VIDEO 2
+      ↓
+   CONTINUOUS LOOP
+========================================= */
+
+const labBox1 = document.getElementById("labBox1");
+const labBox2 = document.getElementById("labBox2");
+
+const labVideo1 = document.getElementById("labVideo1");
+const labVideo2 = document.getElementById("labVideo2");
+
+
+/* Start first video automatically */
+
+window.addEventListener("load", function(){
+
+    labVideo1.muted = true;
+    labVideo1.currentTime = 0;
+
+    const play = labVideo1.play();
+
+    if(play !== undefined){
+
+        play.catch(function(){
+
+            /*
+            Browser autoplay restriction
+            Video will still be ready to play.
+            */
+
+        });
+
+    }
+
+});
+
+
+/* First video finished */
+
+labVideo1.addEventListener("ended", function(){
+
+    labBox1.style.display = "none";
+
+    labBox2.style.display = "block";
+
+    labVideo2.currentTime = 0;
+
+    labVideo2.muted = true;
+
+    labVideo2.play().catch(function(){});
+
+});
+
+
+/* Second video finished */
+
+labVideo2.addEventListener("ended", function(){
+
+    labBox2.style.display = "none";
+
+    labBox1.style.display = "block";
+
+    labVideo1.currentTime = 0;
+
+    labVideo1.muted = true;
+
+    labVideo1.play().catch(function(){});
+
+});
+
+
+/* =========================================
+   FEEDBACK
+========================================= */
+
+function toggleFeedback(){
+
+    const panel =
+    document.getElementById("feedbackPanel");
+
+    panel.classList.toggle("active");
+
+}
+
+
+function sendFeedback(){
+
+    const text =
+    document.getElementById("feedbackText").value.trim();
+
+    if(!text){
+
+        alert("Please write your feedback first.");
+
+        return;
+
+    }
+
+    const message =
+    encodeURIComponent(
+        "OWAIS VISUALS Website Feedback:\n\n" + text
+    );
+
+    window.open(
+        "https://wa.me/918368516979?text=" + message,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
